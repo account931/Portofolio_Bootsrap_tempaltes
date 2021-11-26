@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+<title>BlagoSvet cutt off</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+.stop{color:red;font-size:7em;}
+}
+</style>
+</head>
+<body>
+
+
+
+
+
+<center>
+<h1 class="stop">Сайт </br>не оплачен</h1>
+<img src="https://cdn2.iconfinder.com/data/icons/picons-basic-1/57/basic1-120_smiley_sad-512.png" style="width:7%;"/>
+</center>
+
+
+
+
+
+
+
+
+<script>
+// **************************************************************************************
+// **************************************************************************************
+//                                                                                     ** 
+
+function SendAjaxRequest(){
+  
+
+
+                        // send  data  to  PHP handler  ************ 
+                                 $.ajax({
+                                 url: 'track.php',  //'../ajax/track.php',
+                                 type: 'POST',
+                                 /*data: { namePH:name, emailPH:email,phonePH:phone,descriptionPH:description},*/
+                                 success: function(data) {
+                                 // do something;
+                                 alert('Не оплачен');
+                                 // $("#ajaxResponse").html(data).show().show(2500);
+                                  }
+                                          });
+                                                   // }
+                                               //  END AJAXed  part 
+
+
+}
+// **                                                                                  **
+// **************************************************************************************
+// **************************************************************************************
+
+    SendAjaxRequest();
+</script>
+
+
+
+
+
+</body>
+</html>
